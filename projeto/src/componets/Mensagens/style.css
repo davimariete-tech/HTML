@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap');
+
+.info-aluno {
+    background-color: #1a1a1a; /* Fundo grafite escuro */
+    border: 4px solid #f2d024; /* Borda amarela característica */
+    border-radius: 15px;
+    padding: 25px;
+    width: 300px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 10px 10px 0px #000; /* Sombra sólida estilo HQ/Street Art */
+    transition: all 0.4s ease; /* Transição suave para os efeitos */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Título com estilo "Grit" */
+.info-aluno h2 {
+    font-family: 'Permanent Marker', cursive;
+    color: #f2d024;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #555;
+    letter-spacing: 2px;
+}
+
+.info-aluno p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    font-weight: bold;
+    text-transform: lowercase; /* Estilo mais despojado */
+}
+
+/* --- EFEITOS AO PASSAR O MOUSE (HOVER) --- */
+
+.info-aluno:hover {
+    transform: scale(1.05) rotate(-2deg); /* Dá um leve "pulo" e inclina como um skate */
+    background-color: #222;
+    border-color: #ffffff; /* Muda a borda para branco */
+    box-shadow: 15px 15px 0px #f2d024; /* Sombra inverte para amarelo */
+}
+
+.info-aluno:hover h2 {
+    color: #ffffff;
+    text-shadow: 2px 2px #f2d024; /* Efeito de brilho/relevo no título */
+}
+
+/* Efeito de detalhe: uma linha que "corre" embaixo do texto no hover */
+.info-aluno p::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f2d024;
+    transition: width 0.3s;
+}
+
+.info-aluno:hover p::after {
+    width: 100%;
+}
